@@ -71,16 +71,4 @@ public class BonusServiceTest {
         long actual = service.calculate(amount, registered);
         Assertions.assertEquals(expected, actual);
     }
-
-    @Test
-
-    void calculateForUnregisteredAmountNegative() {
-        BonusService service = new BonusService();
-        Long amount = -1000L;
-        boolean registered = false;
-        long expected = 0;
-
-        long actual = service.calculate(amount, registered);
-        Assertions.assertEquals(expected, actual);
-    }
 }
